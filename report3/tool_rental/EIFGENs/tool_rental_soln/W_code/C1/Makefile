@@ -1,14 +1,14 @@
 INCLUDE_PATH = 
 SHELL = /bin/sh
-CC = gcc
-CPP = g++
-CFLAGS = -O0 -pipe -fPIC -D_GNU_SOURCE -m64  -DEIF_IEEE_BEHAVIOR -DWORKBENCH -I"/cs/local/packages/Eiffel15.08/studio/spec/linux-x86-64/include" -I. $(INCLUDE_PATH)
-CPPFLAGS = -O0 -pipe -fPIC -D_GNU_SOURCE -m64  -DWORKBENCH -I"/cs/local/packages/Eiffel15.08/studio/spec/linux-x86-64/include" -I. $(INCLUDE_PATH)
-LDFLAGS = -m elf_x86_64
-CCLDFLAGS = -m64  
-LDSHAREDFLAGS =  -m elf_x86_64 -shared -o
-EIFLIB = "/cs/local/packages/Eiffel15.08/studio/spec/linux-x86-64/lib/libwkbench.a"
-EIFTEMPLATES = /cs/local/packages/Eiffel15.08/studio/config/linux-x86-64/templates
+CC = cc
+CPP = c++
+CFLAGS = -O0 -pipe -fno-common -fPIC  -DEIF_IEEE_BEHAVIOR -DWORKBENCH -I"/Applications/MacPorts/Eiffel_14.05/EiffelStudio.app/Contents/MacOS/../Resources/../../../studio/spec/macosx-x86-64/include" -I. $(INCLUDE_PATH)
+CPPFLAGS = -O0 -pipe -fno-common -fPIC  -DWORKBENCH -I"/Applications/MacPorts/Eiffel_14.05/EiffelStudio.app/Contents/MacOS/../Resources/../../../studio/spec/macosx-x86-64/include" -I. $(INCLUDE_PATH)
+LDFLAGS = 
+CCLDFLAGS =   
+LDSHAREDFLAGS =   -dynamiclib -flat_namespace -undefined suppress -o
+EIFLIB = "/Applications/MacPorts/Eiffel_14.05/EiffelStudio.app/Contents/MacOS/../Resources/../../../studio/spec/macosx-x86-64/lib/libwkbench.a"
+EIFTEMPLATES = /Applications/MacPorts/Eiffel_14.05/EiffelStudio.app/Contents/MacOS/../Resources/../../../studio/config/macosx-x86-64/templates
 LIBS = -lm
 MAKE = make
 AR = ar
@@ -16,19 +16,19 @@ LD = ld
 MKDEP = \$(EIFFEL_SRC)/C/mkdep $(DPFLAGS) --
 MV = /bin/mv
 CP = /bin/cp
-RANLIB = :
+RANLIB = ar ts
 RM = /bin/rm -f
 FILE_EXIST = 
 RMDIR = 
-X2C = "/cs/local/packages/Eiffel15.08/studio/spec/linux-x86-64/bin/x2c"
-SHAREDLINK = ld
+X2C = "/Applications/MacPorts/Eiffel_14.05/EiffelStudio.app/Contents/MacOS/../Resources/../../../studio/spec/macosx-x86-64/bin/x2c"
+SHAREDLINK = cc
 SHAREDLIBS = -lm
-SHARED_SUFFIX = .so
+SHARED_SUFFIX = .dylib
 COMMAND_MAKEFILE = 
 START_TEST = if [ ! -f finished ] ; then 
 END_TEST = ; fi 
 CREATE_TEST = touch finished 
-SYSTEM_IN_DYNAMIC_LIB = tool_rental.so 
+SYSTEM_IN_DYNAMIC_LIB = tool_rental.dylib 
 
 .SUFFIXES:.cpp .o
 
@@ -40,14 +40,14 @@ SYSTEM_IN_DYNAMIC_LIB = tool_rental.so
 
 OBJECTS = big_file_C1_c.o 
 
-OLDOBJECTS =  ow867.o ow867d.o to866.o to866d.o to865.o to865d.o re864.o re864d.o \
-	re863.o re863d.o da892.o da892d.o c_862.o c_862d.o da890.o da890d.o \
-	da883.o da883d.o ab884.o ab884d.o da885.o da885d.o da891.o da891d.o \
-	da886.o da886d.o da875.o da875d.o ti888.o ti888d.o fi889.o fi889d.o \
-	ti882.o ti882d.o da881.o da881d.o da877.o da877d.o da893.o da893d.o \
-	du880.o du880d.o da878.o da878d.o co879.o co879d.o ti871.o ti871d.o \
-	ti874.o ti874d.o ti887.o ti887d.o ti873.o ti873d.o da876.o da876d.o \
-	gr870.o gr870d.o da869.o da869d.o ti872.o ti872d.o da868.o da868d.o 
+OLDOBJECTS =  ow866.o ow866d.o to861.o to861d.o to865.o to865d.o re864.o re864d.o \
+	re863.o re863d.o da891.o da891d.o da882.o da882d.o c_862.o c_862d.o \
+	da889.o da889d.o ab883.o ab883d.o da884.o da884d.o da890.o da890d.o \
+	da881.o da881d.o du879.o du879d.o da875.o da875d.o da878.o da878d.o \
+	da885.o da885d.o ti887.o ti887d.o fi888.o fi888d.o ti880.o ti880d.o \
+	da877.o da877d.o da892.o da892d.o da876.o da876d.o gr869.o gr869d.o \
+	ti871.o ti871d.o co870.o co870d.o ti874.o ti874d.o ti886.o ti886d.o \
+	ti873.o ti873d.o ti872.o ti872d.o da868.o da868d.o da867.o da867d.o 
 
 all: Cobj1.o
 

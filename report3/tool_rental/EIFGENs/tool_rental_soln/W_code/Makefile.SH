@@ -107,7 +107,7 @@ E1/eparents.o: Makefile E1/Makefile E1/estructure.h
 
 OBJECTS= C2/Cobj2.o C1/Cobj1.o  E1/eoption.o E1/epattern.o E1/efrozen.o E1/ecall.o E1/eplug.o E1/eskelet.o E1/enames.o E1/evisib.o E1/ececil.o E1/einit.o E1/eparents.o
 
-PRECOMP_OBJECTS= "/cs/local/packages/Eiffel15.08/precomp/spec/linux-x86-64/EIFGENs/base/W_code/preobj.o"
+PRECOMP_OBJECTS= "/Users/HB_Y/Eiffel User Files/14.05/precomp/spec/macosx-x86-64/EIFGENs/base/W_code/preobj.o"
 
 
 tool_rental: $(OBJECTS)  E1/emain.o Makefile

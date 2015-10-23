@@ -130,17 +130,17 @@ end_repair_process (tool : REPAIR_DESC)
     -- The tool has been repaired and can be rented again.
   require
     -- ???
-    exist_in_inventory: in_inventory(tool)
-    not_exist_in_to_rent: not in_to_rent(tool)
-    not_exist_in_rented: not in_rented(tool)
-    exist_in_repair: in_repair(tool)
+    exist_in_inventory: in_inventory(tool.desc)
+    not_exist_in_to_rent: not in_to_rent(tool.desc)
+    not_exist_in_rented: not in_rented(tool.desc)
+    exist_in_repair: in_repair(tool.desc)
   do
   ensure
     -- ???
-    exist_in_inventory: in_inventory(tool)
-    exist_in_to_rent: in_to_rent(tool)
-	not_exist_in_rented: not in_rented(tool)
-	not_exist_in_repair: not in_repair(tool)
+    exist_in_inventory: in_inventory(tool.desc)
+    exist_in_to_rent: in_to_rent(tool.desc)
+	not_exist_in_rented: not in_rented(tool.desc)
+	not_exist_in_repair: not in_repair(tool.desc)
     decreased_under_repair_size: number_under_repair_tools = (old number_under_repair_tools - 1)
     increased_number_rented: to_rent.count = (old to_rent.count + 1)
   end
@@ -155,48 +155,104 @@ rent (tool : TOOL_DESC)
     valid_tool: tool /= void
     exist_in_inventory: in_inventory(tool)
     exist_in_to_rent: in_to_rent(tool)
-    not_exist_in_rented:
-
+    not_exist_in_rented: not in_rented(tool)
+    not_exist_repair: not in_repair(tool)
   do
   ensure
     -- ???
+    exist_in_inventory: in_inventory(tool)
+    not_exist_in_to_rent: not in_to_rent(tool)
+    exist_in_rented: in_rented(tool)
+    not_exist_in_repair: not in_repair(tool)
+    number_of_rented: number_rented_tools = old number_rented_tools + 1
+    to_rent_decrease: to_rent.count = old to_rent.count - 1
+
   end
 
 return (tool : RENTAL_DESC)
     -- The return of a rented tool.
   require
     -- ???
+    valid_tool: tool /= void
+    exist_in_inventory: in_inventory(tool.desc)
+    not_exist_in_to_rent: not in_to_rent(tool.desc)
+    exist_in_rented: in_rented(tool.desc)
+    not_exist_repair: not in_repair(tool.desc)
   do
   ensure
     -- ???
+    exist_in_inventory: in_inventory(tool.desc)
+    exist_in_to_rent: in_to_rent(tool.desc)
+    not_exist_in_rented: not in_rented(tool.desc)
+    not_exist_in_repair: not in_repair(tool.desc)
+    number_of_rented: number_rented_tools = old number_rented_tools - 1
+    to_rent_increased: to_rent.count = old to_rent.count + 1
   end
 
 --------------------------------------------------------------------------------
 feature -- Quantifiers
 
-	for_all(the_list: LINKED_LIST[TOOL_DESC];
-			predicate: FUNCTION[ANY, TUPLE[TOOL_DESC], BOOLEAN]) : BOOLEAN
-		-- Result is true if the predicate is true for all tools in inventory
-		local
-			list_copy: LINKED_LIST [TOOL_DESC]
-		do
-			Result := True
-			list_copy := the_list.twin
-			from
-				list_copy.start
-			until
-				list_copy.after or not Result
-			loop
-				Result := Result and predicate.item ([list_copy.item])
-				list_copy.forth
-			variant
-				list_copy.count + 1 - list_copy.index
-			end
-		end
+	for_all_tool_list(list: LINKED_LIST[TOOL_DESC];
+					predicate : FUNCTION[ANY, TUPLE[TOOL_DESC], BOOLEAN]) : BOOLEAN
+	    -- Result is True if the predicate is true for all index_items in the index
+	  local list_copy : LINKED_LIST[TOOL_DESC]
+	  do
+	    Result := true
+	    list_copy := list.twin
+	    from list_copy.start
+	  	invariant
+	  	  -- forall var : the_index_list
+	      --        | 1 <= index(var) <= index(list_copy)-1 :: predicate(var)}
+	    until list_copy.after or not Result
+	    loop
+	      Result := Result and predicate.item([list_copy.item])
+	      list_copy.forth
+	    variant  list_copy.count + 1 - list_copy.index
+	    end
+  	  end
+
+	for_all_rental_list(list: LINKED_LIST[RENTAL_DESC];
+					predicate : FUNCTION[ANY, TUPLE[TOOL_DESC], BOOLEAN]) : BOOLEAN
+	    -- Result is True if the predicate is true for all index_items in the index
+	  local list_copy : LINKED_LIST[RENTAL_DESC]
+	  do
+	    Result := true
+	    list_copy := list.twin
+	    from list_copy.start
+	  	invariant
+	  	  -- forall var : the_index_list
+	      --        | 1 <= index(var) <= index(list_copy)-1 :: predicate(var)}
+	    until list_copy.after or not Result
+	    loop
+	      Result := Result and predicate.item([list_copy.item.desc])
+	      list_copy.forth
+	    variant  list_copy.count + 1 - list_copy.index
+	    end
+  	  end
+
+  	for_all_repair_list(list: LINKED_LIST[REPAIR_DESC];
+					predicate : FUNCTION[ANY, TUPLE[TOOL_DESC], BOOLEAN]) : BOOLEAN
+	    -- Result is True if the predicate is true for all index_items in the index
+	  local list_copy : LINKED_LIST[REPAIR_DESC]
+	  do
+	    Result := true
+	    list_copy := list.twin
+	    from list_copy.start
+	  	invariant
+	  	  -- forall var : the_index_list
+	      --        | 1 <= index(var) <= index(list_copy)-1 :: predicate(var)}
+	    until list_copy.after or not Result
+	    loop
+	      Result := Result and predicate.item([list_copy.item.desc])
+	      list_copy.forth
+	    variant  list_copy.count + 1 - list_copy.index
+	    end
+  	  end
 
 	there_exists_tool(the_list: LINKED_LIST[TOOL_DESC];
 				predicate: FUNCTION[ANY, TUPLE[TOOL_DESC], BOOLEAN]) : BOOLEAN
-
+		require
+			-- the_list /= void
 		local
 			list_copy: LINKED_LIST [TOOL_DESC]
 		do
@@ -205,20 +261,27 @@ feature -- Quantifiers
 			from
 				list_copy.start
 			invariant
-				-- forall var : the_list
+				-- forall var : the_list | 1 <= index_of(var) <= index(the_list) - 1
+				--					:: not predicate(var)
+				-- This assertion states that if the element in the_list is still not found
+				-- then that is equivalent to the fact that the predicate is not true yet.
 			until
-				list_copy.after or not Result
+				list_copy.after or Result
 			loop
-				Result := Result and predicate.item ([list_copy.item])
+				Result := predicate.item ([list_copy.item])
 				list_copy.forth
 			variant
 				list_copy.count + 1 - list_copy.index
 			end
+		ensure
+			-- forall var : the_list | predicate(var) :: Result = True
+			-- forall var : the_list | not predicate(var) :: Result = False
 		end
 
 	there_exists_rented(the_list: LINKED_LIST[RENTAL_DESC];
 				predicate: FUNCTION[ANY, TUPLE[TOOL_DESC], BOOLEAN]) : BOOLEAN
-
+		require
+			-- the_list /= void
 		local
 			list_copy: LINKED_LIST [RENTAL_DESC]
 		do
@@ -227,20 +290,27 @@ feature -- Quantifiers
 			from
 				list_copy.start
 			invariant
-				-- forall var : the_list
+				-- forall var : the_list | 1 <= index_of(var) <= index(the_list) - 1
+				--					:: not predicate(var)
+				-- This assertion states that if the element in the_list is still not found
+				-- then that is equivalent to the fact that the predicate is not true yet.
 			until
-				list_copy.after or not Result
+				list_copy.after or Result
 			loop
-				Result := Result and predicate.item ([list_copy.item.desc])
+				Result := predicate.item ([list_copy.item.desc])
 				list_copy.forth
 			variant
 				list_copy.count + 1 - list_copy.index
 			end
+		ensure
+			-- forall var : the_list | predicate(var) :: Result = True
+			-- forall var : the_list | not predicate(var) :: Result = False
 		end
 
 	there_exists_repair(the_list: LINKED_LIST[REPAIR_DESC];
 				predicate: FUNCTION[ANY, TUPLE[TOOL_DESC], BOOLEAN]) : BOOLEAN
-
+		require
+			-- the_list /= void
 		local
 			list_copy: LINKED_LIST [REPAIR_DESC]
 		do
@@ -249,15 +319,21 @@ feature -- Quantifiers
 			from
 				list_copy.start
 			invariant
-				-- forall var : the_list
+				-- forall var : the_list | 1 <= index_of(var) <= index(the_list) - 1
+				--					:: not predicate(var)
+				-- This assertion states that if the element in the_list is still not found
+				-- then that is equivalent to the fact that the predicate is not true yet.
 			until
-				list_copy.after or not Result
+				list_copy.after or Result
 			loop
-				Result := Result and predicate.item ([list_copy.item.desc])
+				Result := predicate.item ([list_copy.item.desc])
 				list_copy.forth
 			variant
 				list_copy.count + 1 - list_copy.index
 			end
+		ensure
+			-- forall var : the_list | predicate(var) :: Result = True
+			-- forall var : the_list | not predicate(var) :: Result = False
 		end
 
 
@@ -265,7 +341,7 @@ feature -- Quantifiers
 feature -- Agents
 
 	same_tool(tool1, tool2 : TOOL_DESC) : BOOLEAN
-	-- Do tool1 and tool2 have the same id
+	-- Do tool1 and tool2 have the same id?
 	require	not_void: tool1 /= void and tool2 /= void
 	do
 		Result := tool1.id.is_equal (tool2.id)
@@ -306,7 +382,25 @@ feature -- Contract support
 		end
 
 
+
 --------------------------------------------------------------------------------
 invariant
-  -- ???
+
+  total_inventory_unchanged: to_rent.count = (size_of_inventory - number_rented_tools - number_under_repair_tools)
+  -- rented list intersect repair list = void ^ rented list intersect to rent = void
+  rented_not_applicable_to_repair: not for_all_rental_list(rented, agent in_repair(?))
+  rented_not_applicable_to_rent: not for_all_rental_list(rented, agent in_to_rent(?))
+  -- repair list intersect rented list = void ^ repair list intersect to rent = void
+  under_repair_not_applicable_to_be_rented: not for_all_repair_list(under_repair, agent in_rented(?))
+  under_repair_not_applicable_to_rent: not for_all_repair_list(under_repair, agent in_to_rent(?))
+  -- to rent list intersect repair list = void ^ to rent list intersect rented list = void
+  to_rent_not_applicable_to_repair: not for_all_tool_list(to_rent, agent in_repair(?))
+  to_rent_not_applicable_to_rented: not for_all_tool_list(to_rent, agent in_rented(?))
+
+  -- all list elements are in the inventory
+  to_rent_in_inventory: for_all_tool_list(to_rent, agent in_inventory(?))
+  rented_in_inventory: for_all_rental_list(rented, agent in_inventory(?))
+  repair_in_inventory: for_all_repair_list(under_repair, agent in_inventory(?))
+
+
 end

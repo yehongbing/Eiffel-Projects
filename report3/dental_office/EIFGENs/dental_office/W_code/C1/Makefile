@@ -1,14 +1,14 @@
 INCLUDE_PATH = 
 SHELL = /bin/sh
-CC = gcc
-CPP = g++
-CFLAGS = -O0 -pipe -fPIC -D_GNU_SOURCE -m64  -DEIF_IEEE_BEHAVIOR -DWORKBENCH -I"/cs/local/packages/Eiffel15.08/studio/spec/linux-x86-64/include" -I. $(INCLUDE_PATH)
-CPPFLAGS = -O0 -pipe -fPIC -D_GNU_SOURCE -m64  -DWORKBENCH -I"/cs/local/packages/Eiffel15.08/studio/spec/linux-x86-64/include" -I. $(INCLUDE_PATH)
-LDFLAGS = -m elf_x86_64
-CCLDFLAGS = -m64  
-LDSHAREDFLAGS =  -m elf_x86_64 -shared -o
-EIFLIB = "/cs/local/packages/Eiffel15.08/studio/spec/linux-x86-64/lib/libwkbench.a"
-EIFTEMPLATES = /cs/local/packages/Eiffel15.08/studio/config/linux-x86-64/templates
+CC = cc
+CPP = c++
+CFLAGS = -O0 -pipe -fno-common -fPIC  -DEIF_IEEE_BEHAVIOR -DWORKBENCH -I"/Applications/MacPorts/Eiffel_14.05/EiffelStudio.app/Contents/MacOS/../Resources/../../../studio/spec/macosx-x86-64/include" -I. $(INCLUDE_PATH)
+CPPFLAGS = -O0 -pipe -fno-common -fPIC  -DWORKBENCH -I"/Applications/MacPorts/Eiffel_14.05/EiffelStudio.app/Contents/MacOS/../Resources/../../../studio/spec/macosx-x86-64/include" -I. $(INCLUDE_PATH)
+LDFLAGS = 
+CCLDFLAGS =   
+LDSHAREDFLAGS =   -dynamiclib -flat_namespace -undefined suppress -o
+EIFLIB = "/Applications/MacPorts/Eiffel_14.05/EiffelStudio.app/Contents/MacOS/../Resources/../../../studio/spec/macosx-x86-64/lib/libwkbench.a"
+EIFTEMPLATES = /Applications/MacPorts/Eiffel_14.05/EiffelStudio.app/Contents/MacOS/../Resources/../../../studio/config/macosx-x86-64/templates
 LIBS = -lm
 MAKE = make
 AR = ar
@@ -16,19 +16,19 @@ LD = ld
 MKDEP = \$(EIFFEL_SRC)/C/mkdep $(DPFLAGS) --
 MV = /bin/mv
 CP = /bin/cp
-RANLIB = :
+RANLIB = ar ts
 RM = /bin/rm -f
 FILE_EXIST = 
 RMDIR = 
-X2C = "/cs/local/packages/Eiffel15.08/studio/spec/linux-x86-64/bin/x2c"
-SHAREDLINK = ld
+X2C = "/Applications/MacPorts/Eiffel_14.05/EiffelStudio.app/Contents/MacOS/../Resources/../../../studio/spec/macosx-x86-64/bin/x2c"
+SHAREDLINK = cc
 SHAREDLIBS = -lm
-SHARED_SUFFIX = .so
+SHARED_SUFFIX = .dylib
 COMMAND_MAKEFILE = 
 START_TEST = if [ ! -f finished ] ; then 
 END_TEST = ; fi 
 CREATE_TEST = touch finished 
-SYSTEM_IN_DYNAMIC_LIB = dental_office.so 
+SYSTEM_IN_DYNAMIC_LIB = dental_office.dylib 
 
 .SUFFIXES:.cpp .o
 
@@ -40,14 +40,14 @@ SYSTEM_IN_DYNAMIC_LIB = dental_office.so
 
 OBJECTS = big_file_C1_c.o 
 
-OLDOBJECTS =  st863.o st863d.o da888.o da888d.o da891.o da891d.o da879.o da879d.o \
-	da886.o da886d.o c_862.o c_862d.o ab880.o ab880d.o da881.o da881d.o \
-	da887.o da887d.o ti878.o ti878d.o da877.o da877d.o ti884.o ti884d.o \
-	da874.o da874d.o da889.o da889d.o du876.o du876d.o da872.o da872d.o \
-	da875.o da875d.o da882.o da882d.o da890.o da890d.o fi885.o fi885d.o \
-	in892.o in892d.o ti870.o ti870d.o da873.o da873d.o ti871.o ti871d.o \
-	ti883.o ti883d.o gr866.o gr866d.o ti868.o ti868d.o co867.o co867d.o \
-	ti869.o ti869d.o da865.o da865d.o da864.o da864d.o 
+OLDOBJECTS =  st862.o st862d.o da887.o da887d.o c_861.o c_861d.o da890.o da890d.o \
+	da885.o da885d.o da878.o da878d.o ab879.o ab879d.o da880.o da880d.o \
+	da886.o da886d.o ti883.o ti883d.o ti877.o ti877d.o da876.o da876d.o \
+	da873.o da873d.o da888.o da888d.o da871.o da871d.o da889.o da889d.o \
+	da881.o da881d.o fi884.o fi884d.o du875.o du875d.o da874.o da874d.o \
+	in891.o in891d.o ti870.o ti870d.o ti882.o ti882d.o ti869.o ti869d.o \
+	da872.o da872d.o ti867.o ti867d.o co866.o co866d.o gr865.o gr865d.o \
+	ti868.o ti868d.o da864.o da864d.o da863.o da863d.o de892.o de892d.o 
 
 all: Cobj1.o
 

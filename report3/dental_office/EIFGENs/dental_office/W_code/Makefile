@@ -1,14 +1,14 @@
 INCLUDE_PATH = 
 SHELL = /bin/sh
-CC = gcc
-CPP = g++
-CFLAGS = -O0 -pipe -fPIC -D_GNU_SOURCE -m64  -DEIF_IEEE_BEHAVIOR -DWORKBENCH -I"/cs/local/packages/Eiffel15.08/studio/spec/linux-x86-64/include" -I. $(INCLUDE_PATH)
-CPPFLAGS = -O0 -pipe -fPIC -D_GNU_SOURCE -m64  -DWORKBENCH -I"/cs/local/packages/Eiffel15.08/studio/spec/linux-x86-64/include" -I. $(INCLUDE_PATH)
-LDFLAGS = -m elf_x86_64
-CCLDFLAGS = -m64  
-LDSHAREDFLAGS =  -m elf_x86_64 -shared -o
-EIFLIB = "/cs/local/packages/Eiffel15.08/studio/spec/linux-x86-64/lib/libwkbench.a"
-EIFTEMPLATES = /cs/local/packages/Eiffel15.08/studio/config/linux-x86-64/templates
+CC = cc
+CPP = c++
+CFLAGS = -O0 -pipe -fno-common -fPIC  -DEIF_IEEE_BEHAVIOR -DWORKBENCH -I"/Applications/MacPorts/Eiffel_14.05/EiffelStudio.app/Contents/MacOS/../Resources/../../../studio/spec/macosx-x86-64/include" -I. $(INCLUDE_PATH)
+CPPFLAGS = -O0 -pipe -fno-common -fPIC  -DWORKBENCH -I"/Applications/MacPorts/Eiffel_14.05/EiffelStudio.app/Contents/MacOS/../Resources/../../../studio/spec/macosx-x86-64/include" -I. $(INCLUDE_PATH)
+LDFLAGS = 
+CCLDFLAGS =   
+LDSHAREDFLAGS =   -dynamiclib -flat_namespace -undefined suppress -o
+EIFLIB = "/Applications/MacPorts/Eiffel_14.05/EiffelStudio.app/Contents/MacOS/../Resources/../../../studio/spec/macosx-x86-64/lib/libwkbench.a"
+EIFTEMPLATES = /Applications/MacPorts/Eiffel_14.05/EiffelStudio.app/Contents/MacOS/../Resources/../../../studio/config/macosx-x86-64/templates
 LIBS = -lm
 MAKE = make
 AR = ar
@@ -16,19 +16,19 @@ LD = ld
 MKDEP = \$(EIFFEL_SRC)/C/mkdep $(DPFLAGS) --
 MV = /bin/mv
 CP = /bin/cp
-RANLIB = :
+RANLIB = ar ts
 RM = /bin/rm -f
 FILE_EXIST = 
 RMDIR = 
-X2C = "/cs/local/packages/Eiffel15.08/studio/spec/linux-x86-64/bin/x2c"
-SHAREDLINK = ld
+X2C = "/Applications/MacPorts/Eiffel_14.05/EiffelStudio.app/Contents/MacOS/../Resources/../../../studio/spec/macosx-x86-64/bin/x2c"
+SHAREDLINK = cc
 SHAREDLIBS = -lm
-SHARED_SUFFIX = .so
+SHARED_SUFFIX = .dylib
 COMMAND_MAKEFILE = 
 START_TEST = if [ ! -f finished ] ; then 
 END_TEST = ; fi 
 CREATE_TEST = touch finished 
-SYSTEM_IN_DYNAMIC_LIB = dental_office.so 
+SYSTEM_IN_DYNAMIC_LIB = dental_office.dylib 
 
 .SUFFIXES:.cpp .o
 
@@ -38,7 +38,7 @@ SYSTEM_IN_DYNAMIC_LIB = dental_office.so
 .cpp.o:
 	$(CPP) $(CPPFLAGS) -c $<
 
-SUBDIRS = C1 E1
+SUBDIRS = C1 C2 C3 E1
 
 EXTERNALS = 
 
@@ -46,6 +46,12 @@ all: dental_office
 
 C1/Cobj1.o: Makefile E1/estructure.h
 	cd C1 ; $(START_TEST) $(SHELL) Makefile.SH ; $(MAKE) $(END_TEST)
+
+C2/Cobj2.o: Makefile E1/estructure.h
+	cd C2 ; $(START_TEST) $(SHELL) Makefile.SH ; $(MAKE) $(END_TEST)
+
+C3/Cobj3.o: Makefile E1/estructure.h
+	cd C3 ; $(START_TEST) $(SHELL) Makefile.SH ; $(MAKE) $(END_TEST)
 
 E1/Makefile: E1/Makefile.SH
 	cd E1 ; $(SHELL) Makefile.SH
@@ -87,9 +93,9 @@ E1/einit.o: Makefile E1/Makefile E1/estructure.h
 E1/eparents.o: Makefile E1/Makefile E1/estructure.h
 	cd E1 ; $(MAKE) eparents.o
 
-OBJECTS= C1/Cobj1.o  E1/eoption.o E1/epattern.o E1/efrozen.o E1/ecall.o E1/eplug.o E1/eskelet.o E1/enames.o E1/evisib.o E1/ececil.o E1/einit.o E1/eparents.o
+OBJECTS= C3/Cobj3.o C2/Cobj2.o C1/Cobj1.o  E1/eoption.o E1/epattern.o E1/efrozen.o E1/ecall.o E1/eplug.o E1/eskelet.o E1/enames.o E1/evisib.o E1/ececil.o E1/einit.o E1/eparents.o
 
-PRECOMP_OBJECTS= "/cs/local/packages/Eiffel15.08/precomp/spec/linux-x86-64/EIFGENs/base/W_code/preobj.o"
+PRECOMP_OBJECTS= "/Users/HB_Y/Eiffel User Files/14.05/precomp/spec/macosx-x86-64/EIFGENs/base/W_code/preobj.o"
 
 
 dental_office: $(OBJECTS)  E1/emain.o Makefile

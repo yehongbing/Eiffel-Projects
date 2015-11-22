@@ -1,7 +1,7 @@
 note
 	description: "Summary description for {DENTAL_OFFICE}."
 	author: "Hongbing Ye"
-	date: "$Date$"
+	date: "27 Oct 2015"
 	revision: "$Revision$"
 
 class

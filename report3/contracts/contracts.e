@@ -8,8 +8,8 @@
 
 note
   description: "Report 3 executable contract exercise"
-  author: "??? Your name ???"
-  date: "??? Date ???"
+  author: "Hongbing Ye"
+  date: "27 Oct 2015"
   version: "1.0"
 
 class CONTRACTS

@@ -52,14 +52,14 @@ static struct desc_info desc_868[] = {
 	{28, (BODY_INDEX)-1, 867, NULL},
 	{29, (BODY_INDEX)-1, 215, NULL},
 	{30, (BODY_INDEX)-1, 867, NULL},
-	{12668, (BODY_INDEX)-1, 220, NULL},
-	{12661, (BODY_INDEX)-1, 245, gen_type4_868},
-	{12662, (BODY_INDEX)-1, 245, gen_type5_868},
-	{12663, (BODY_INDEX)-1, 245, gen_type6_868},
-	{12664, (BODY_INDEX)-1, 245, gen_type7_868},
-	{12667, (BODY_INDEX)-1, 220, NULL},
-	{12665, (BODY_INDEX)-1, 220, NULL},
-	{12666, (BODY_INDEX)-1, 220, NULL},
+	{12664, (BODY_INDEX)-1, 220, NULL},
+	{12665, (BODY_INDEX)-1, 245, gen_type4_868},
+	{12666, (BODY_INDEX)-1, 245, gen_type5_868},
+	{12667, (BODY_INDEX)-1, 245, gen_type6_868},
+	{12668, (BODY_INDEX)-1, 245, gen_type7_868},
+	{12671, (BODY_INDEX)-1, 220, NULL},
+	{12669, (BODY_INDEX)-1, 220, NULL},
+	{12670, (BODY_INDEX)-1, 220, NULL},
 };
 
 extern void Init868(void);

@@ -1,6 +1,6 @@
 note
 	description: "Summary description for {TEETH}."
-	author: ""
+	author: "Hongbing Ye"
 	date: "$Date$"
 	revision: "$Revision$"
 

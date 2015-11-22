@@ -1,0 +1,56 @@
+
+#ifndef _C28_he1396_
+#define _C28_he1396_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern void F490_5158(EIF_REFERENCE, EIF_INTEGER_32);
+extern EIF_REFERENCE F490_5159(EIF_REFERENCE);
+extern EIF_BOOLEAN F490_5160(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_INTEGER_32 F490_5161(EIF_REFERENCE);
+extern EIF_INTEGER_32 F490_5162(EIF_REFERENCE);
+extern EIF_BOOLEAN F490_5165(EIF_REFERENCE);
+extern EIF_BOOLEAN F490_5167(EIF_REFERENCE);
+extern EIF_BOOLEAN F490_5168(EIF_REFERENCE, EIF_REFERENCE);
+extern void F490_5170(EIF_REFERENCE, EIF_REFERENCE);
+extern void F490_5171(EIF_REFERENCE, EIF_REFERENCE);
+extern void F490_5172(EIF_REFERENCE, EIF_REFERENCE);
+extern void F490_5173(EIF_REFERENCE);
+extern void F490_5174(EIF_REFERENCE, EIF_REFERENCE);
+extern void F490_5175(EIF_REFERENCE);
+extern EIF_REFERENCE F490_5178(EIF_REFERENCE);
+extern EIF_REFERENCE F490_5179(EIF_REFERENCE, EIF_INTEGER_32);
+extern EIF_REFERENCE F490_5181(EIF_REFERENCE);
+extern EIF_REFERENCE F490_5182(EIF_REFERENCE, EIF_INTEGER_32);
+extern void F490_5183(EIF_REFERENCE, EIF_REFERENCE, EIF_INTEGER_32);
+extern void F490_5184(EIF_REFERENCE, EIF_REFERENCE, EIF_INTEGER_32);
+extern void F490_5185(EIF_REFERENCE, EIF_REFERENCE);
+extern EIF_BOOLEAN F490_5186(EIF_REFERENCE, EIF_REFERENCE, EIF_REFERENCE);
+extern void EIF_Minit1396(void);
+extern EIF_BOOLEAN F460_5148(EIF_REFERENCE);
+extern EIF_BOOLEAN F407_5127(EIF_REFERENCE);
+extern char *(*R4552[])();
+extern char *(*R4201[])();
+extern char *(*R4246[])();
+extern char *(*R5685[])();
+extern char *(*R5686[])();
+extern char *(*R4176[])();
+extern char *(*R4178[])();
+extern char *(*R5699[])();
+extern char *(*R5460[])();
+extern char *(*R5031[])();
+extern char *(*R3336[])();
+extern char *(*R5669[])();
+extern char *(*R5705[])();
+extern char *(*R5670[])();
+extern char *(*R4162[])();
+extern EIF_TYPE_INDEX Y4159[];
+extern EIF_TYPE_INDEX *Y4159_gen_type [];
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

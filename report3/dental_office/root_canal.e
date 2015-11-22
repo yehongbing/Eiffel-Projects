@@ -1,7 +1,7 @@
 note
 	description: "Summary description for {ROOT_CANAL}."
-	author: ""
-	date: "$Date$"
+	author: "Hongbing Ye"
+	date: "27 Oct 2015"
 	revision: "$Revision$"
 
 class

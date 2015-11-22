@@ -1,0 +1,7 @@
+MVC pattern example - spaceling
+--------------------------------
+
+As simple as it can get. An example of using text fields, labels and buttons.
+
+Enter a name in the text area, press the
+"Say Hello" button and see the greeting.  Try it with an empty text area.

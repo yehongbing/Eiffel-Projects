@@ -1,0 +1,25 @@
+
+#ifndef _C2_ev89_
+#define _C2_ev89_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+RTOSHF (EIF_REFERENCE,2442)
+static EIF_REFERENCE F67_2442_body(EIF_REFERENCE);
+extern EIF_REFERENCE F67_2442(EIF_REFERENCE);
+RTOSHF (EIF_REFERENCE,2448)
+static EIF_REFERENCE F67_2448_body(EIF_REFERENCE);
+extern EIF_REFERENCE F67_2448(EIF_REFERENCE);
+RTOSHF (EIF_REFERENCE,2451)
+static EIF_REFERENCE F67_2451_body(EIF_REFERENCE);
+extern EIF_REFERENCE F67_2451(EIF_REFERENCE);
+extern void EIF_Minit89(void);
+extern void F781_7428(EIF_REFERENCE, EIF_REFERENCE);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

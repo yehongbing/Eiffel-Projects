@@ -1,0 +1,35 @@
+
+#ifndef _C11_ev515_
+#define _C11_ev515_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern void F946_11012(EIF_REFERENCE);
+extern EIF_REFERENCE F946_11014(EIF_REFERENCE);
+extern void F946_11023(EIF_REFERENCE);
+extern void F946_11041(EIF_REFERENCE, EIF_INTEGER_32);
+extern EIF_REFERENCE F946_11046(EIF_REFERENCE);
+extern void F946_11047(EIF_REFERENCE);
+extern void F946_11048(EIF_REFERENCE);
+extern void F946_11049(EIF_REFERENCE, EIF_REFERENCE);
+RTOSHF (EIF_REFERENCE,11050)
+static EIF_REFERENCE F946_11050_body(EIF_REFERENCE);
+extern EIF_REFERENCE F946_11050(EIF_REFERENCE);
+extern void EIF_Minit515(void);
+extern void F930_10736(EIF_REFERENCE);
+extern void F1049_13616(EIF_REFERENCE, EIF_INTEGER_32);
+extern EIF_REFERENCE F1030_13088(EIF_REFERENCE);
+extern void F728_6751(EIF_REFERENCE, EIF_REFERENCE);
+extern void F728_6752(EIF_REFERENCE);
+extern void F930_10745(EIF_REFERENCE);
+extern char *(*R10479[])();
+extern long O8570[];
+extern long O10416[];
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

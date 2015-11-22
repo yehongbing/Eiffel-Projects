@@ -16,7 +16,7 @@ static EIF_TYPE_INDEX gen_type3_879 [] = {0,0xFFFF};
 
 
 static struct desc_info desc_879[] = {
-	{(BODY_INDEX) 12782, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
+	{(BODY_INDEX) 12785, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
 	{0, (BODY_INDEX)-1, 220, NULL},
 	{1, (BODY_INDEX)-1, 238, gen_type0_879},
 	{2, (BODY_INDEX)-1, 191, NULL},
@@ -53,12 +53,12 @@ static struct desc_info desc_879[] = {
 	{1440, (BODY_INDEX)-1, 191, NULL},
 	{1441, (BODY_INDEX)-1, 191, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 191, NULL},
-	{12783, (BODY_INDEX)-1, 191, NULL},
-	{12784, (BODY_INDEX)-1, 191, NULL},
+	{12786, (BODY_INDEX)-1, 191, NULL},
+	{12787, (BODY_INDEX)-1, 191, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 878, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 878, NULL},
-	{12786, (BODY_INDEX)-1, 878, NULL},
-	{12785, (BODY_INDEX)-1, 878, NULL},
+	{12789, (BODY_INDEX)-1, 878, NULL},
+	{12788, (BODY_INDEX)-1, 878, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 878, NULL},
 };
 
@@ -68,8 +68,8 @@ void Init879(void)
 	IDSC(desc_879, 0, 878);
 	IDSC(desc_879 + 1, 1, 878);
 	IDSC(desc_879 + 32, 207, 878);
-	IDSC(desc_879 + 36, 361, 878);
-	IDSC(desc_879 + 39, 373, 878);
+	IDSC(desc_879 + 36, 365, 878);
+	IDSC(desc_879 + 39, 376, 878);
 }
 
 

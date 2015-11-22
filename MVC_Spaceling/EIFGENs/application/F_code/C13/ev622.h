@@ -1,0 +1,23 @@
+
+#ifndef _C13_ev622_
+#define _C13_ev622_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern EIF_REFERENCE F1001_12691(EIF_REFERENCE);
+extern void F1001_12692(EIF_REFERENCE, EIF_REFERENCE, EIF_INTEGER_32);
+extern void F1001_12693(EIF_REFERENCE, EIF_REFERENCE, EIF_INTEGER_32);
+extern void F1001_12694(EIF_REFERENCE);
+extern void EIF_Minit622(void);
+extern void F719_6674(EIF_REFERENCE);
+extern void F1178_16572(EIF_REFERENCE, EIF_REFERENCE, EIF_INTEGER_32);
+extern void F1178_16571(EIF_REFERENCE, EIF_REFERENCE, EIF_INTEGER_32);
+extern void F1178_16544(EIF_REFERENCE);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

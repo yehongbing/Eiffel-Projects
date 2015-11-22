@@ -3444,23 +3444,23 @@ static struct eif_par_types par858 = {858, ptf858, (uint16) 3, (uint16) 1, (char
 static EIF_TYPE_INDEX ptf859[] = {236,0xFFFF};
 static struct eif_par_types par859 = {859, ptf859, (uint16) 1, (uint16) 1, (char) 0};
 
-/* TOOL_RENTAL */
+/* C_DATE */
 static EIF_TYPE_INDEX ptf860[] = {0,0xFFFF};
 static struct eif_par_types par860 = {860, ptf860, (uint16) 1, (uint16) 0, (char) 0};
 
-/* C_DATE */
+/* REPAIR_DESC */
 static EIF_TYPE_INDEX ptf861[] = {0,0xFFFF};
 static struct eif_par_types par861 = {861, ptf861, (uint16) 1, (uint16) 0, (char) 0};
 
-/* REPAIR_DESC */
+/* RENTAL_DESC */
 static EIF_TYPE_INDEX ptf862[] = {0,0xFFFF};
 static struct eif_par_types par862 = {862, ptf862, (uint16) 1, (uint16) 0, (char) 0};
 
-/* RENTAL_DESC */
+/* TOOL_DESC */
 static EIF_TYPE_INDEX ptf863[] = {0,0xFFFF};
 static struct eif_par_types par863 = {863, ptf863, (uint16) 1, (uint16) 0, (char) 0};
 
-/* TOOL_DESC */
+/* TOOL_RENTAL */
 static EIF_TYPE_INDEX ptf864[] = {0,0xFFFF};
 static struct eif_par_types par864 = {864, ptf864, (uint16) 1, (uint16) 0, (char) 0};
 

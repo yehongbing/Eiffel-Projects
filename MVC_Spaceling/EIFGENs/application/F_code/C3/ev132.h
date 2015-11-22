@@ -1,0 +1,23 @@
+
+#ifndef _C3_ev132_
+#define _C3_ev132_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern EIF_REFERENCE F91_3006(EIF_REFERENCE);
+static EIF_REFERENCE F91_3008_body(EIF_REFERENCE);
+extern EIF_REFERENCE F91_3008(EIF_REFERENCE);
+extern EIF_REFERENCE F91_3009(EIF_REFERENCE);
+static EIF_REFERENCE F91_3011_body(EIF_REFERENCE);
+extern EIF_REFERENCE F91_3011(EIF_REFERENCE);
+extern void EIF_Minit132(void);
+extern EIF_REFERENCE F92_3013(EIF_REFERENCE);
+extern EIF_REFERENCE F92_3012(EIF_REFERENCE);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

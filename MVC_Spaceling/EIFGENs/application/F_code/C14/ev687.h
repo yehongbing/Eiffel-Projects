@@ -1,0 +1,30 @@
+
+#ifndef _C14_ev687_
+#define _C14_ev687_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern void F1050_13684(EIF_REFERENCE, EIF_REFERENCE);RTOSHF (EIF_REFERENCE, 13685)
+
+
+extern EIF_REFERENCE F1050_13685(EIF_REFERENCE);
+static EIF_REFERENCE F1050_13686_body(EIF_REFERENCE);
+extern EIF_REFERENCE F1050_13686(EIF_REFERENCE);
+extern void EIF_Minit687(void);
+extern void F1051_13695(EIF_REFERENCE, EIF_REAL_32);
+extern EIF_REAL_32 F938_10891(EIF_REFERENCE);
+extern void F1051_13694(EIF_REFERENCE, EIF_REAL_32);
+extern void F1051_13696(EIF_REFERENCE, EIF_REAL_32);
+extern EIF_REAL_32 F938_10889(EIF_REFERENCE);
+extern EIF_REAL_32 F938_10890(EIF_REFERENCE);
+extern long O10149[];
+extern EIF_TYPE_INDEX Y10149[];
+extern EIF_TYPE_INDEX *Y10149_gen_type [];
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

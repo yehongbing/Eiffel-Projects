@@ -1,5 +1,5 @@
 /*
- * Class TOOL_DESC
+ * Class TOOL_RENTAL
  */
 
 #include "eif_macros.h"
@@ -13,10 +13,14 @@ static EIF_TYPE_INDEX gen_type0_865 [] = {238,864,0xFFFF};
 static EIF_TYPE_INDEX gen_type1_865 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type2_865 [] = {0,0xFFFF};
 static EIF_TYPE_INDEX gen_type3_865 [] = {0,0xFFFF};
+static EIF_TYPE_INDEX gen_type4_865 [] = {477,863,0xFFFF};
+static EIF_TYPE_INDEX gen_type5_865 [] = {477,862,0xFFFF};
+static EIF_TYPE_INDEX gen_type6_865 [] = {477,861,0xFFFF};
+static EIF_TYPE_INDEX gen_type7_865 [] = {477,863,0xFFFF};
 
 
 static struct desc_info desc_865[] = {
-	{(BODY_INDEX) 12655, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
+	{(BODY_INDEX) 12637, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
 	{0, (BODY_INDEX)-1, 220, NULL},
 	{1, (BODY_INDEX)-1, 238, gen_type0_865},
 	{2, (BODY_INDEX)-1, 191, NULL},
@@ -48,10 +52,31 @@ static struct desc_info desc_865[] = {
 	{28, (BODY_INDEX)-1, 864, NULL},
 	{29, (BODY_INDEX)-1, 215, NULL},
 	{30, (BODY_INDEX)-1, 864, NULL},
-	{12656, 0, 220, NULL},
-	{12657, 8, 890, NULL},
-	{12658, 16, 206, NULL},
-	{12659, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{12638, 0, 477, gen_type4_865},
+	{12639, 8, 477, gen_type5_865},
+	{12640, 16, 477, gen_type6_865},
+	{12641, 24, 477, gen_type7_865},
+	{12642, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{12643, (BODY_INDEX)-1, 206, NULL},
+	{12644, (BODY_INDEX)-1, 206, NULL},
+	{12645, (BODY_INDEX)-1, 206, NULL},
+	{12646, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{12647, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{12648, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{12649, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{12650, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{12651, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{12652, (BODY_INDEX)-1, 191, NULL},
+	{12653, (BODY_INDEX)-1, 191, NULL},
+	{12654, (BODY_INDEX)-1, 191, NULL},
+	{12655, (BODY_INDEX)-1, 191, NULL},
+	{12656, (BODY_INDEX)-1, 191, NULL},
+	{12657, (BODY_INDEX)-1, 191, NULL},
+	{12658, (BODY_INDEX)-1, 191, NULL},
+	{12659, (BODY_INDEX)-1, 191, NULL},
+	{12660, (BODY_INDEX)-1, 191, NULL},
+	{12661, (BODY_INDEX)-1, 191, NULL},
+	{12662, (BODY_INDEX)-1, 191, NULL},
 };
 
 extern void Init865(void);
@@ -59,7 +84,7 @@ void Init865(void)
 {
 	IDSC(desc_865, 0, 864);
 	IDSC(desc_865 + 1, 1, 864);
-	IDSC(desc_865 + 32, 349, 864);
+	IDSC(desc_865 + 32, 348, 864);
 }
 
 

@@ -1,0 +1,98 @@
+case $CONFIG in
+'')
+	if test ! -f ../config.sh; then
+		(echo "Can't find ../config.sh."; exit 1)
+	fi 2>/dev/null
+	. ../config.sh
+	;;
+esac
+case "$O" in
+*/*) cd `expr X$0 : 'X\(.*\)/'` ;;
+esac
+echo "Compiling C code in C24"
+$spitshell >Makefile <<!GROK!THIS!
+INCLUDE_PATH =  -I"\$(ISE_LIBRARY)/library/vision2/spec/include" -I"\$(ISE_LIBRARY)/library/vision2/implementation/gtk/Clib" `$ISE_LIBRARY/library/vision2/implementation/gtk/Clib/vision2-gtk-config --include_path`
+SHELL = /bin/sh
+CC = $cc
+CPP = $cpp
+CFLAGS = $optimize $ccflags $large -DEIF_IEEE_BEHAVIOR -I"$rt_include" -I. \$(INCLUDE_PATH)
+CPPFLAGS = $optimize $cppflags $large -I"$rt_include" -I. \$(INCLUDE_PATH)
+LDFLAGS = $ldflags
+CCLDFLAGS = $ccldflags  $windows_flags
+LDSHAREDFLAGS =  $ldsharedflags
+EIFLIB = "$rt_lib/$prefix$eiflib$suffix"
+EIFTEMPLATES = $rt_templates
+LIBS = $libs
+MAKE = $make
+AR = $ar
+LD = $ld
+MKDEP = $mkdep \$(DPFLAGS) --
+MV = $mv
+CP = $cp
+RANLIB = $ranlib
+RM = $rm -f
+FILE_EXIST = $file_exist
+RMDIR = $rmdir
+X2C = "$x2c"
+SHAREDLINK = $sharedlink
+SHAREDLIBS = $sharedlibs
+SHARED_SUFFIX = $shared_suffix
+COMMAND_MAKEFILE = 
+START_TEST = $start_test 
+END_TEST = $end_test 
+CREATE_TEST = $create_test 
+SYSTEM_IN_DYNAMIC_LIB = spaceling$shared_suffix 
+!GROK!THIS!
+$spitshell >>Makefile <<'!NO!SUBS!'
+.SUFFIXES: .x .xpp .cpp .o
+
+.c.o:
+	$(CC) $(CFLAGS) -c $<
+
+.cpp.o:
+	$(CPP) $(CPPFLAGS) -c $<
+
+.x.o:
+	$(X2C) $< $*.c
+	$(CC) $(CFLAGS) -c $*.c
+	$(RM) $*.c
+
+.xpp.o:
+	$(X2C) $< $*.cpp
+	$(CPP) $(CPPFLAGS) -c $*.cpp
+	$(RM) $*.cpp
+
+.x.c:
+	$(X2C) $< $*.c
+
+.xpp.cpp:
+	$(X2C) $< $*.cpp
+
+OBJECTS = big_file_C24_c.o 
+
+OLDOBJECTS =  sp1173.o ar1151.o ar1179.o ty1162.o ar1152.o ar1180.o fi1193.o \
+	dy1154.o dy1189.o co1183.o to1153.o to1188.o dy1161.o dy1198.o \
+	ha1168.o bo1164.o re1163.o li1181.o in1175.o ha1165.o ha1170.o \
+	li1155.o li1190.o se1156.o se1191.o co1187.o bi1157.o bi1192.o \
+	ch1158.o ch1195.o 
+
+all: Cobj24.o
+
+Cobj24.o: $(OBJECTS) Makefile
+	$(LD) $(LDFLAGS) -r -o Cobj24.o $(OBJECTS)
+	$(RM) $(OBJECTS)
+	$(CREATE_TEST)
+
+clean: local_clean
+clobber: local_clobber
+
+local_clean::
+	$(RM) core finished *.o
+
+local_clobber:: local_clean
+	$(RM) Makefile
+
+!NO!SUBS!
+chmod 644 Makefile
+$eunicefix Makefile
+

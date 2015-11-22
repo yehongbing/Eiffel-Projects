@@ -1,0 +1,23 @@
+
+#ifndef _C24_ha1165_
+#define _C24_ha1165_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern EIF_NATURAL_32 F548_5682(EIF_REFERENCE);
+extern EIF_POINTER F548_5683(EIF_REFERENCE);
+extern EIF_BOOLEAN F548_5684(EIF_REFERENCE);
+extern void F548_5685(EIF_REFERENCE);
+extern EIF_REFERENCE F548_5686(EIF_REFERENCE);
+extern void EIF_Minit1165(void);
+extern EIF_INTEGER_32 F696_6474(EIF_REFERENCE, EIF_INTEGER_32);
+extern EIF_INTEGER_32 F696_6475(EIF_REFERENCE, EIF_INTEGER_32);
+extern EIF_BOOLEAN F534_5673(EIF_REFERENCE);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

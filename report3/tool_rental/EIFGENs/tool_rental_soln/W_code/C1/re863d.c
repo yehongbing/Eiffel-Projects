@@ -1,5 +1,5 @@
 /*
- * Class REPAIR_DESC
+ * Class RENTAL_DESC
  */
 
 #include "eif_macros.h"
@@ -16,7 +16,7 @@ static EIF_TYPE_INDEX gen_type3_863 [] = {0,0xFFFF};
 
 
 static struct desc_info desc_863[] = {
-	{(BODY_INDEX) 12641, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
+	{(BODY_INDEX) 12625, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
 	{0, (BODY_INDEX)-1, 220, NULL},
 	{1, (BODY_INDEX)-1, 238, gen_type0_863},
 	{2, (BODY_INDEX)-1, 191, NULL},
@@ -48,12 +48,12 @@ static struct desc_info desc_863[] = {
 	{28, (BODY_INDEX)-1, 862, NULL},
 	{29, (BODY_INDEX)-1, 215, NULL},
 	{30, (BODY_INDEX)-1, 862, NULL},
-	{12642, 0, 864, NULL},
-	{12643, 8, 890, NULL},
-	{12644, 16, 890, NULL},
-	{12645, 24, 220, NULL},
-	{12646, 32, 220, NULL},
-	{12647, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{12626, 0, 863, NULL},
+	{12627, 8, 890, NULL},
+	{12628, 16, 890, NULL},
+	{12629, 24, 220, NULL},
+	{12630, 32, 220, NULL},
+	{12631, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 };
 
 extern void Init863(void);
@@ -61,7 +61,7 @@ void Init863(void)
 {
 	IDSC(desc_863, 0, 862);
 	IDSC(desc_863 + 1, 1, 862);
-	IDSC(desc_863 + 32, 351, 862);
+	IDSC(desc_863 + 32, 350, 862);
 }
 
 

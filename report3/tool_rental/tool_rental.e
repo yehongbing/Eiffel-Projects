@@ -1,7 +1,7 @@
 indexing
   description: "Objects that represent a tool rental shop"
-  author: "??? Your name ???"
-  date: "??? Date ???"
+  author: "Hongbing Ye"
+  date: "27 Oct 2015"
   revision: "Build 1"
 
 class TOOL_RENTAL
@@ -102,6 +102,7 @@ buy (new_tool : TOOL_DESC)
   do
   ensure
     -- ???
+    exist_in_inventory: in_inventory(new_tool)
     increased_inventory_size: size_of_inventory = (old size_of_inventory + 1)
     increased_to_rent: to_rent.count = (old to_rent.count + 1)
   end

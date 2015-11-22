@@ -1,7 +1,7 @@
 note
 	description: "Summary description for {PATIENT}."
-	author: ""
-	date: "$Date$"
+	author: "Hongbing Ye"
+	date: "27 Oct 2015"
 	revision: "$Revision$"
 
 class
@@ -18,14 +18,16 @@ feature --Attributes
 --------------------------------------------------------------------------------
 feature {NONE} -- Initialization
 
-make
+make(add: STRING; bod: DATE)
   -- Initialization for 'Current'.
   do
-
+	address := add
+	birth := bod
+	create teeth.make
   end
 
 --------------------------------------------------------------------------------
-feature	-- Query
+feature	-- Routines
 	had_root_canal : BOOLEAN
 	require
 		teeth /= void

@@ -1,7 +1,7 @@
 note
   description: "Start of dental office system execution"
-  author: "??? Your name ???"
-  date: "??? Date ???"
+  author: "Hongbing Ye"
+  date: "27 Oct 2015"
   version: "1.0"
 
 class START
@@ -16,8 +16,7 @@ aDate : DATE  -- Included only to see if the Time library is correctly included.
 make
   -- Initialization for `Current'.
   do
-    print("Dental system started%N")
-    print("Dental system ended5n")
+
   end
 
 end

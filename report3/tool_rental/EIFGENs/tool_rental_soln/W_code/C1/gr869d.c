@@ -16,7 +16,7 @@ static EIF_TYPE_INDEX gen_type3_869 [] = {0,0xFFFF};
 
 
 static struct desc_info desc_869[] = {
-	{(BODY_INDEX) 12669, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
+	{(BODY_INDEX) 12672, (BODY_INDEX) -1, INVALID_DTYPE, NULL},
 	{0, (BODY_INDEX)-1, 220, NULL},
 	{1, (BODY_INDEX)-1, 238, gen_type0_869},
 	{2, (BODY_INDEX)-1, 191, NULL},
@@ -60,7 +60,7 @@ void Init869(void)
 {
 	IDSC(desc_869, 0, 868);
 	IDSC(desc_869 + 1, 1, 868);
-	IDSC(desc_869 + 32, 373, 868);
+	IDSC(desc_869 + 32, 376, 868);
 }
 
 

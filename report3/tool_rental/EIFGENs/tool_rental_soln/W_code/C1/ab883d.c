@@ -49,7 +49,7 @@ static struct desc_info desc_883[] = {
 	{28, (BODY_INDEX)-1, 882, NULL},
 	{29, (BODY_INDEX)-1, 215, NULL},
 	{30, (BODY_INDEX)-1, 882, NULL},
-	{12873, (BODY_INDEX)-1, 191, NULL},
+	{12876, (BODY_INDEX)-1, 191, NULL},
 	{1443, (BODY_INDEX)-1, 191, NULL},
 	{1444, (BODY_INDEX)-1, 191, NULL},
 	{1445, (BODY_INDEX)-1, 191, NULL},
@@ -58,7 +58,7 @@ static struct desc_info desc_883[] = {
 	{1449, (BODY_INDEX)-1, 882, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 882, NULL},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 878, NULL},
-	{12874, (BODY_INDEX)-1, 894, gen_type4_883},
+	{12877, (BODY_INDEX)-1, 894, gen_type4_883},
 	{(BODY_INDEX)-1, (BODY_INDEX)-1, 878, NULL},
 };
 

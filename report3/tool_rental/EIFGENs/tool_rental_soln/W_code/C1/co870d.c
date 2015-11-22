@@ -48,9 +48,6 @@ static struct desc_info desc_870[] = {
 	{28, (BODY_INDEX)-1, 869, NULL},
 	{29, (BODY_INDEX)-1, 215, NULL},
 	{30, (BODY_INDEX)-1, 869, NULL},
-	{12670, (BODY_INDEX)-1, 191, NULL},
-	{12671, (BODY_INDEX)-1, 191, NULL},
-	{12672, (BODY_INDEX)-1, 191, NULL},
 	{12673, (BODY_INDEX)-1, 191, NULL},
 	{12674, (BODY_INDEX)-1, 191, NULL},
 	{12675, (BODY_INDEX)-1, 191, NULL},
@@ -74,6 +71,9 @@ static struct desc_info desc_870[] = {
 	{12693, (BODY_INDEX)-1, 191, NULL},
 	{12694, (BODY_INDEX)-1, 191, NULL},
 	{12695, (BODY_INDEX)-1, 191, NULL},
+	{12696, (BODY_INDEX)-1, 191, NULL},
+	{12697, (BODY_INDEX)-1, 191, NULL},
+	{12698, (BODY_INDEX)-1, 191, NULL},
 };
 
 extern void Init870(void);
@@ -81,7 +81,7 @@ void Init870(void)
 {
 	IDSC(desc_870, 0, 869);
 	IDSC(desc_870 + 1, 1, 869);
-	IDSC(desc_870 + 32, 375, 869);
+	IDSC(desc_870 + 32, 378, 869);
 }
 
 

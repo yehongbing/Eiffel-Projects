@@ -1,0 +1,25 @@
+
+#ifndef _C19_ev901_
+#define _C19_ev901_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern EIF_REFERENCE F1197_16981(EIF_REFERENCE);
+static EIF_REFERENCE F1197_17005_body(EIF_REFERENCE);
+extern EIF_REFERENCE F1197_17005(EIF_REFERENCE);
+extern void EIF_Minit901(void);
+extern EIF_REFERENCE F1201_17140(EIF_REFERENCE);
+extern EIF_INTEGER_32 F753_6930(EIF_REFERENCE);
+extern EIF_REFERENCE F1201_17141(EIF_REFERENCE, EIF_INTEGER_32, EIF_INTEGER_32);
+extern EIF_INTEGER_32 F753_6932(EIF_REFERENCE);
+extern long O10149[];
+extern EIF_TYPE_INDEX Y10149[];
+extern EIF_TYPE_INDEX *Y10149_gen_type [];
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -1,0 +1,18 @@
+Observer pattern example
+-------------------------
+
+The observer pattern is based on the observation (pun not intended) that the state
+of an object may be viewed from many different perspectives.  With the observer
+pattern we decouple the dependency  of the subject (the state changes of an
+object) from the observers of the state.
+
+In this example, the cluster 'observer' contains a deferred class OBSERVER from
+which all observers inherit.  Observers are notified via the update method that
+they need to update their view of the subject, and observers can verify that their
+view is up to date with respect to the subject.
+
+The cluster models_and_views contains a subject, also known as a model, of
+the kelvin temperature in which the temperature can be changed.  The cluster
+also contains three views of the model, the FARENHEIT_VIEW, the CENTIGRADE_VIEW
+and the KELVIN_VIEW,  where each view reports on the state of the KELVIN_MODEL.
+

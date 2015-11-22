@@ -48,7 +48,7 @@ static struct desc_info desc_866[] = {
 	{28, (BODY_INDEX)-1, 865, NULL},
 	{29, (BODY_INDEX)-1, 215, NULL},
 	{30, (BODY_INDEX)-1, 865, NULL},
-	{12660, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
+	{12663, (BODY_INDEX)-1, (EIF_TYPE_INDEX)-1, NULL},
 };
 
 extern void Init866(void);

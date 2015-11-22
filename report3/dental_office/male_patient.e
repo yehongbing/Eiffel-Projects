@@ -1,6 +1,6 @@
 note
 	description: "Summary description for {MALE_PATIENT}."
-	author: ""
+	author: "Hongbing Ye"
 	date: "$Date$"
 	revision: "$Revision$"
 
@@ -10,5 +10,5 @@ inherit
 	PATIENT
 ----------------
 feature
-	sex : STRING
+
 end

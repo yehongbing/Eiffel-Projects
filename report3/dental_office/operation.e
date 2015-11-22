@@ -1,7 +1,7 @@
 note
 	description: "Summary description for {OPERATION}."
-	author: ""
-	date: "$Date$"
+	author: "Hongbing Ye"
+	date: "27 Oct 2015"
 	revision: "$Revision$"
 
 class

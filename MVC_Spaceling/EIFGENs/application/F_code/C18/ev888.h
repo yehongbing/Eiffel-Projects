@@ -1,0 +1,36 @@
+
+#ifndef _C18_ev888_
+#define _C18_ev888_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern EIF_REFERENCE F1188_16708(EIF_REFERENCE);
+extern void F1188_16711(EIF_REFERENCE, EIF_REFERENCE, EIF_REFERENCE, EIF_BOOLEAN);
+extern EIF_BOOLEAN F1188_16712(EIF_REFERENCE);
+extern void F1188_16714(EIF_REFERENCE);
+extern void F1188_16715(EIF_REFERENCE);
+extern EIF_INTEGER_32 F1188_16717(EIF_REFERENCE);
+static EIF_REFERENCE F1188_16718_body(EIF_REFERENCE);
+extern EIF_REFERENCE F1188_16718(EIF_REFERENCE);
+extern void F1188_16719(EIF_REFERENCE);
+extern void F1188_16720(EIF_REFERENCE);
+extern void EIF_Minit888(void);
+extern EIF_REFERENCE F1183_16642(EIF_REFERENCE);
+extern EIF_REFERENCE F65_2392(EIF_REFERENCE);
+extern void F1082_14219(EIF_REFERENCE);
+RTOSHF(EIF_REFERENCE,2392)
+extern char *(*R12498[])();
+extern long O12500[];
+extern long O10149[];
+extern long O10979[];
+extern long O12497[];
+extern EIF_TYPE_INDEX Y10149[];
+extern EIF_TYPE_INDEX *Y10149_gen_type [];
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

@@ -4974,20 +4974,12 @@ char *names860 [] =
 
 char *names861 [] =
 {
-"inventory",
-"rented",
-"under_repair",
-"to_rent",
-};
-
-char *names862 [] =
-{
 "internal_item",
 "is_utc",
 "millisecond_now",
 };
 
-char *names863 [] =
+char *names862 [] =
 {
 "desc",
 "start_date",
@@ -4996,7 +4988,7 @@ char *names863 [] =
 "resolution",
 };
 
-char *names864 [] =
+char *names863 [] =
 {
 "desc",
 "start_date",
@@ -5005,11 +4997,19 @@ char *names864 [] =
 "contact",
 };
 
-char *names865 [] =
+char *names864 [] =
 {
 "id",
 "bought",
 "repair_count",
+};
+
+char *names865 [] =
+{
+"inventory",
+"rented",
+"under_repair",
+"to_rent",
 };
 
 char *names874 [] =

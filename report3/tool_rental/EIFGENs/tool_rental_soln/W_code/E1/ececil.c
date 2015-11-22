@@ -80,10 +80,38 @@ void _A235_159_2 (void(*f_ptr) (EIF_REFERENCE, EIF_TYPED_VALUE) , EIF_TYPED_VALU
 }
 
 	/* TOOL_RENTAL same_tool */
-EIF_TYPED_VALUE _A861_50_3 (EIF_TYPED_VALUE(*f_ptr) (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE) , EIF_TYPED_VALUE * closed, EIF_TYPED_VALUE * open)
+EIF_TYPED_VALUE _A865_52_3 (EIF_TYPED_VALUE(*f_ptr) (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE) , EIF_TYPED_VALUE * closed, EIF_TYPED_VALUE * open)
 {
 	GTCX
-	return (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTVF(5417, "same_tool", closed [1].it_r))(closed [1].it_r, closed [2], open [1]);
+	return (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE, EIF_TYPED_VALUE)) RTVF(4977, "same_tool", closed [1].it_r))(closed [1].it_r, closed [2], open [1]);
+}
+
+	/* TOOL_RENTAL in_repair */
+EIF_TYPED_VALUE _A865_55_2 (EIF_TYPED_VALUE(*f_ptr) (EIF_REFERENCE, EIF_TYPED_VALUE) , EIF_TYPED_VALUE * closed, EIF_TYPED_VALUE * open)
+{
+	GTCX
+	return (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTVF(4980, "in_repair", closed [1].it_r))(closed [1].it_r, open [1]);
+}
+
+	/* TOOL_RENTAL in_to_rent */
+EIF_TYPED_VALUE _A865_56_2 (EIF_TYPED_VALUE(*f_ptr) (EIF_REFERENCE, EIF_TYPED_VALUE) , EIF_TYPED_VALUE * closed, EIF_TYPED_VALUE * open)
+{
+	GTCX
+	return (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTVF(4981, "in_to_rent", closed [1].it_r))(closed [1].it_r, open [1]);
+}
+
+	/* TOOL_RENTAL in_rented */
+EIF_TYPED_VALUE _A865_54_2 (EIF_TYPED_VALUE(*f_ptr) (EIF_REFERENCE, EIF_TYPED_VALUE) , EIF_TYPED_VALUE * closed, EIF_TYPED_VALUE * open)
+{
+	GTCX
+	return (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTVF(4979, "in_rented", closed [1].it_r))(closed [1].it_r, open [1]);
+}
+
+	/* TOOL_RENTAL in_inventory */
+EIF_TYPED_VALUE _A865_53_2 (EIF_TYPED_VALUE(*f_ptr) (EIF_REFERENCE, EIF_TYPED_VALUE) , EIF_TYPED_VALUE * closed, EIF_TYPED_VALUE * open)
+{
+	GTCX
+	return (FUNCTION_CAST(EIF_TYPED_VALUE, (EIF_REFERENCE, EIF_TYPED_VALUE)) RTVF(4978, "in_inventory", closed [1].it_r))(closed [1].it_r, open [1]);
 }
 
 

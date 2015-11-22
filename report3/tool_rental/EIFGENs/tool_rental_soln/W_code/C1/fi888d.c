@@ -55,9 +55,6 @@ static struct desc_info desc_888[] = {
 	{815, (BODY_INDEX)-1, 206, NULL},
 	{810, (BODY_INDEX)-1, 206, NULL},
 	{811, (BODY_INDEX)-1, 206, NULL},
-	{12670, (BODY_INDEX)-1, 191, NULL},
-	{12671, (BODY_INDEX)-1, 191, NULL},
-	{12672, (BODY_INDEX)-1, 191, NULL},
 	{12673, (BODY_INDEX)-1, 191, NULL},
 	{12674, (BODY_INDEX)-1, 191, NULL},
 	{12675, (BODY_INDEX)-1, 191, NULL},
@@ -81,10 +78,13 @@ static struct desc_info desc_888[] = {
 	{12693, (BODY_INDEX)-1, 191, NULL},
 	{12694, (BODY_INDEX)-1, 191, NULL},
 	{12695, (BODY_INDEX)-1, 191, NULL},
-	{12965, (BODY_INDEX)-1, 220, NULL},
-	{12966, (BODY_INDEX)-1, 206, NULL},
-	{12967, (BODY_INDEX)-1, 174, gen_type4_888},
-	{12968, (BODY_INDEX)-1, 191, NULL},
+	{12696, (BODY_INDEX)-1, 191, NULL},
+	{12697, (BODY_INDEX)-1, 191, NULL},
+	{12698, (BODY_INDEX)-1, 191, NULL},
+	{12968, (BODY_INDEX)-1, 220, NULL},
+	{12969, (BODY_INDEX)-1, 206, NULL},
+	{12970, (BODY_INDEX)-1, 174, gen_type4_888},
+	{12971, (BODY_INDEX)-1, 191, NULL},
 };
 
 extern void Init888(void);
@@ -93,8 +93,8 @@ void Init888(void)
 	IDSC(desc_888, 0, 887);
 	IDSC(desc_888 + 1, 1, 887);
 	IDSC(desc_888 + 32, 55, 887);
-	IDSC(desc_888 + 38, 375, 887);
-	IDSC(desc_888 + 64, 367, 887);
+	IDSC(desc_888 + 38, 378, 887);
+	IDSC(desc_888 + 64, 370, 887);
 }
 
 

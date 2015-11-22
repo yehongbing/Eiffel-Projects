@@ -8,8 +8,8 @@
 
 note
   description: "Contracts start of execution"
-  author: "??? Your name ???"
-  date: "??? Date ???"
+  author: "Hongbing Ye"
+  date: "27 Oct 2015"
   version: "1.0"
 
 class CONTRACTS_TEST
